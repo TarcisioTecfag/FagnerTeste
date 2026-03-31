@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tecfag - Teste do Chat Widget</title>
+  <link rel="stylesheet" href="./tecfag-chat.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #7f1d1d, #dc2626);
+      color: white;
+      padding: 20px 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    header h1 { font-size: 24px; font-weight: 700; }
+    header p { font-size: 14px; opacity: 0.85; margin-top: 4px; }
+    main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    .banner {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+    .banner h2 { color: #7f1d1d; font-size: 28px; margin-bottom: 12px; }
+    .banner p { color: #555; line-height: 1.7; font-size: 15px; }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+    }
+    .product-card:hover { transform: translateY(-4px); }
+    .product-card h3 { color: #7f1d1d; margin-bottom: 8px; font-size: 18px; }
+    .product-card p { color: #666; font-size: 14px; line-height: 1.5; }
+    .product-card .price { color: #dc2626; font-size: 20px; font-weight: 700; margin-top: 12px; }
+    .info-box {
+      background: #fffbeb;
+      border: 2px dashed #f59e0b;
+      border-radius: 12px;
+      padding: 20px 30px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .info-box h3 { color: #92400e; margin-bottom: 8px; }
+    .info-box p { color: #78716c; font-size: 14px; }
+    .info-box code { background: #fef3c7; padding: 2px 8px; border-radius: 4px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏭 Tecfag — Máquinas e Equipamentos</h1>
+    <p>Página de teste do Chat Widget (ambiente controlado)</p>
+  </header>
+
+  <main>
+    <div class="banner">
+      <h2>Bem-vindo à Tecfag!</h2>
+      <p>
+        Esta é uma página de teste para validar o widget de chat antes de colocar no site oficial.
+        O widget do Fagner deve aparecer no <strong>canto inferior esquerdo</strong> da tela.
+        Clique nele para iniciar uma conversa e teste o fluxo completo.
+      </p>
+    </div>
+
+    <div class="products">
+      <div class="product-card">
+        <h3>🔧 Seladora Automática</h3>
+        <p>Seladora automática para embalagens plásticas. Alta velocidade e precisão.</p>
+        <div class="price">Consultar preço</div>
+      </div>
+      <div class="product-card">
+        <h3>⚙️ Envasadora Líquidos</h3>
+        <p>Envasadora para líquidos e semilíquidos. Capacidade de até 5.000 unidades/hora.</p>
+        <div class="price">Consultar preço</div>
+      </div>
+      <div class="product-card">
+        <h3>📦 Empacotadora Industrial</h3>
+        <p>Empacotadora industrial para grãos, farináceos e produtos secos.</p>
+        <div class="price">Consultar preço</div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h3>🧪 Ambiente de Teste</h3>
+      <p>
+        Esta página simula o site da Tecfag.<br>
+        O widget conecta ao backend: <code>fagnertecfag-production.up.railway.app</code><br>
+        Abra o painel admin em <code>/livechat</code> para ver os dados chegando em tempo real.
+      </p>
+    </div>
+  </main>
+
+  <div id="root"></div>
+  <script src="./tecfag-chat.iife.js"></script>
+</body>
+</html>
